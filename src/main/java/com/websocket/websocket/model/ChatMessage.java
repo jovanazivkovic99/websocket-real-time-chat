@@ -1,18 +1,14 @@
 package com.websocket.websocket.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
-import java.util.Date;
-
-@NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
-@Data
-@ToString
+@NoArgsConstructor
+@Builder
 public class ChatMessage {
-    private String nickname;
+    private String sender;
     private String content;
-    private Date timestamp;
+    private MessageType messageType;
 }
